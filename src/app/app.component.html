@@ -1,5 +1,5 @@
 <nz-layout class="app-layout">
-  <!-- ?SIDEBAR -->
+  <!-- #region SIDEBAR -->
   <nz-sider
     class="menu-sidebar"
     nzCollapsible
@@ -9,15 +9,15 @@
     [(nzCollapsed)]="isCollapsed"
     [nzTrigger]="null"
   >
-    <!-- ?LOGO -->
+    <!-- LOGO -->
     <div class="sidebar-logo">
       <a href="#">
         <img src="../assets/logo.svg" alt="logo" />
         <h1>Fulboard</h1>
       </a>
     </div>
-    <!-- ?LOGO -->
-    <!-- ?MENU ITEMS -->
+    <!-- LOGO -->
+    <!-- #region MENU ITEMS -->
     <ul
       class="menu-items"
       nz-menu
@@ -36,8 +36,9 @@
         <span>{{ menuItem.title }}</span>
       </li>
     </ul>
-    <!-- ?MENU ITEMS -->
+    <!-- #endregion MENU ITEMS -->
   </nz-sider>
+  <!-- #endregion SIDEBAR -->
   <nz-layout>
     <nz-header>
       <div class="app-header">
