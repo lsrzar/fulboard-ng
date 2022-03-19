@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 interface menuItem {
   title: string;
   icon: string;
+  route?: string;
 }
 @Component({
   selector: 'app-root',
@@ -14,6 +15,7 @@ export class AppComponent {
     {
       title: 'Dashboard',
       icon: 'dashboard',
+      route: '/dashboard',
     },
     {
       title: 'Fixtures',
