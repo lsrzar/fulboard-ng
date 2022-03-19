@@ -13,12 +13,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IconsProviderModule } from './icons-provider.module';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
+import { MenuItemComponent } from './layout/components/menu-item/menu-item.component';
 
 registerLocaleData(en);
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MenuItemComponent
   ],
   imports: [
     BrowserModule,
@@ -31,6 +33,9 @@ registerLocaleData(en);
     NzMenuModule
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [
+    MenuItemComponent
+  ]
 })
 export class AppModule { }
