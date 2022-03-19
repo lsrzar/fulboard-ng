@@ -57,10 +57,18 @@
   }
 }
 
-.menu-items {
-  margin-top: 32px;
-  font-family: "Quicksand", Helvetica Neue, Arial, Helvetica, sans-serif;
-  font-weight: 700;
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  height: 85%;
+  .menu-items {
+    margin-top: 32px;
+    font-family: "Quicksand", Helvetica Neue, Arial, Helvetica, sans-serif;
+    font-weight: 700;
+  }
+  .util-menu-items {
+    margin-top: auto;
+  }
 }
 
 nz-header {

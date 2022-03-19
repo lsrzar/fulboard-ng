@@ -17,32 +17,50 @@
       </a>
     </div>
     <!-- LOGO -->
-    <!-- #region MENU ITEMS -->
-    <ul
-      class="menu-items"
-      nz-menu
-      nzTheme="light"
-      nzMode="inline"
-      [nzInlineCollapsed]="isCollapsed"
-    >
-      <li
-        nz-menu-item
-        nzMmatchRouter
-        *ngFor="let menuItem of menuItems"
-        nz-tooltip
-        [nzTooltipTrigger]="isCollapsed ? 'hover' : null"
-        [nzTooltipMouseEnterDelay]="0.3"
-        nzTooltipPlacement="right"
-        nzTooltipColor="#50ca88"
-        nzTooltipTitle="{{ menuItem.title }}"
+    <div class="menu-container">
+      <!-- #region MENU ITEMS -->
+      <ul
+        class="menu-items"
+        nz-menu
+        nzTheme="light"
+        nzMode="inline"
+        [nzInlineCollapsed]="isCollapsed"
       >
-        <i nz-icon nzType="{{ menuItem.icon }}"></i>
-        <span
-          ><a routerLink="{{ menuItem.route }}">{{ menuItem.title }}</a></span
+        <li
+          nz-menu-item
+          nzMmatchRouter
+          *ngFor="let menuItem of menuItems"
+          nz-tooltip
+          [nzTooltipTrigger]="isCollapsed ? 'hover' : null"
+          [nzTooltipMouseEnterDelay]="0.3"
+          nzTooltipPlacement="right"
+          nzTooltipColor="#50ca88"
+          nzTooltipTitle="{{ menuItem.title }}"
         >
-      </li>
-    </ul>
-    <!-- #endregion MENU ITEMS -->
+          <i nz-icon nzType="{{ menuItem.icon }}"></i>
+          <span
+            ><a routerLink="{{ menuItem.route }}">{{ menuItem.title }}</a></span
+          >
+        </li>
+      </ul>
+      <ul
+        class="util-menu-items"
+        nz-menu
+        nzTheme="light"
+        nzMode="inline"
+        [nzInlineCollapsed]="isCollapsed"
+      >
+        <li nz-menu-item>
+          <i nz-icon nzType="info-circle"></i>
+          <span><a routerLink="">Ayuda</a></span>
+        </li>
+        <li nz-menu-item>
+          <i nz-icon nzType="setting"></i>
+          <span><a routerLink="">Configuración</a></span>
+        </li>
+      </ul>
+      <!-- #endregion MENU ITEMS -->
+    </div>
   </nz-sider>
   <!-- #endregion SIDEBAR -->
   <nz-layout>
