@@ -31,7 +31,17 @@
           <a routerLink="/welcome">Welcome</a>
         </li>
       -->
-      <li nz-menu-item nzMmatchRouter *ngFor="let menuItem of menuItems">
+      <li
+        nz-menu-item
+        nzMmatchRouter
+        *ngFor="let menuItem of menuItems"
+        nz-tooltip
+        [nzTooltipTrigger]="isCollapsed ? 'hover' : null"
+        [nzTooltipMouseEnterDelay]="0.3"
+        nzTooltipPlacement="right"
+        nzTooltipColor="#50ca88"
+        nzTooltipTitle="{{ menuItem.title }}"
+      >
         <i nz-icon nzType="{{ menuItem.icon }}"></i>
         <span
           ><a routerLink="{{ menuItem.route }}">{{ menuItem.title }}</a></span
