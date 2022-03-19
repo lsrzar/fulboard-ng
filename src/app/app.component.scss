@@ -38,7 +38,7 @@
   padding-left: 24px;
   overflow: hidden;
   line-height: 64px;
-  background: #fff;
+  background: var(--bg-white);
   transition: all 0.3s;
   img {
     display: inline-block;
@@ -48,13 +48,18 @@
   }
   h1 {
     display: inline-block;
-    margin: 0 0 0 20px;
-    color: #222;
+    margin: 0 0 0 8px;
+    color: var(--bg-black);
     font-weight: 600;
     font-size: 24px;
     font-family: "Righteous", Helvetica Neue, Arial, Helvetica, sans-serif;
     vertical-align: middle;
   }
+}
+
+.menu-items {
+  font-family: "Quicksand", Helvetica Neue, Arial, Helvetica, sans-serif;
+  font-weight: 700;
 }
 
 nz-header {
@@ -67,7 +72,7 @@ nz-header {
   position: relative;
   height: 64px;
   padding: 0;
-  background: #fff;
+  background: var(--bg-white);
   box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
 }
 
@@ -77,6 +82,6 @@ nz-content {
 
 .inner-content {
   padding: 24px;
-  background: #fff;
+  background: var(--bg-white);
   height: 100%;
 }
