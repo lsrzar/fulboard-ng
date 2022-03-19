@@ -4,7 +4,7 @@
     class="menu-sidebar"
     nzCollapsible
     nzTheme="light"
-    nzWidth="256px"
+    nzWidth="200px"
     nzBreakpoint="md"
     [(nzCollapsed)]="isCollapsed"
     [nzTrigger]="null"
@@ -25,19 +25,16 @@
       nzMode="inline"
       [nzInlineCollapsed]="isCollapsed"
     >
-      <li nz-submenu nzOpen="false" nzTitle="Dashboard" nzIcon="dashboard">
-        <ul>
-          <li nz-menu-item nzMatchRouter>
-            <a routerLink="/welcome">Welcome</a>
-          </li>
-        </ul>
+      <!-- TODO : route links -->
+      <!-- 
+        <li nz-menu-item nzMatchRouter>
+          <a routerLink="/welcome">Welcome</a>
+        </li>
+      -->
+      <li nz-menu-item *ngFor="let menuItem of menuItems">
+        <i nz-icon nzType="{{ menuItem.icon }}"></i>
+        <span>{{ menuItem.title }}</span>
       </li>
-      <menu-item title="Noticias" icon="read"></menu-item>
-      <menu-item title="Fixtures" icon="calendar"></menu-item>
-      <menu-item title="Jugadores" icon="user"></menu-item>
-      <menu-item title="Tabla" icon="table"></menu-item>
-      <menu-item title="Torneos" icon="trophy"></menu-item>
-      <menu-item title="Lesionados" icon="plus-square"></menu-item>
     </ul>
     <!-- ?MENU ITEMS -->
   </nz-sider>
